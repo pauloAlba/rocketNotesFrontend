@@ -3,6 +3,7 @@ import { Container, Form } from "./styles"
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
 import { Background } from "./styles"
+import { Link } from "react-router-dom"
 
 export function SignIn(){
   return(
@@ -15,18 +16,21 @@ export function SignIn(){
         <Input
         placeholder="E-mail"
         type="text"
-        item={FiMail}
+        icon={FiMail}
         />
 
          <Input
         placeholder="Senha"
         type="password"
-        item={FiLock}
+        icon={FiLock}
         />
 
-        <Button title="Entrar"/>
+        <Button title="Cadastrar"/>
 
-        <a href="#">Criar conta</a>
+        <Link to="/register">
+          Criar conta
+        </Link>
+
       </Form>
       
       <Background/>
